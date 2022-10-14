@@ -3,9 +3,9 @@ class UserModel {
   String name;
   String login;
   String html_url;
-  String followers;
-  String following;
-  String public_repos;
+  int followers;
+  int following;
+  int public_repos;
 
   UserModel({
     required this.avatar_url,
@@ -22,9 +22,9 @@ class UserModel {
     String name = jsonData['name'] as String;
     String login = jsonData['login'] as String;
     String html_url = jsonData['html_url'] as String;
-    String followers = jsonData['followers'] as String;
-    String following = jsonData['following'] as String;
-    String public_repos = jsonData['public_repos'] as String;
+    int followers = jsonData['followers'] as int;
+    int following = jsonData['following'] as int;
+    int public_repos = jsonData['public_repos'] as int;
 
     return UserModel(
       avatar_url: avatar_url,
